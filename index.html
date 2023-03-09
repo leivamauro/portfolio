@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- estilos css -->
     <link rel="stylesheet" href="css/styles.css">
     <title>Leiva Mauro</title>
 </head>
 <body>
     <header>
-        <div class="mode">
-
-        </div>
+        <div id="dark-mode-btn"><p>light</p></div>
     </header>
     <main class="main">
         <aside class="personal">
-            <!-- aqui se van a colocar los subtitulos (about me, portfolio, skills, estudios) fixed-->
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum ut, quam laudantium dignissimos quod quas consequatur hic, 
-                quos accusamus, maxime quisquam harum! Earum soluta maiores excepturi sunt temporibus modi inventore?
-            </p>
+            <img src="/images/usuario.png" alt="Imagen de usuario aqui" srcset="">
+            <ul>
+                <li><p><a href="#about_me">About me</a></p></li>
+                <li><p><a href="#portfolio">Portfolio</a></p></li>
+                <li><p><a href="#skills">Technical Skills</a></p></li>
+                <li><p><a href="#studies">My Studies</a></p></li>
+                <li><p><a href="#contacts">Contacts</a></p></li>
+            </ul>
         </aside>
         <section class="articles">
             <article id="about_me">
@@ -30,12 +31,15 @@
                 </p>
             </article>
             <article id="portfolio">
+                <h1>Portfolio</h1>
                 <!-- portfolio -->
             </article>
             <article id="skills">
+                <h1>Technical Skills</h1>
                 <!-- skills -->
             </article>
             <article id="studies">
+                <h1>My studies</h1>
                 <!-- estudios -->
             </article>
         </section>
@@ -46,8 +50,12 @@
         <!-- el fondo del lado derecho sera del color del section -->
     </main>
 
-    <footer class="footer">
+    <footer id="contacts">
+        <h1>Contacts</h1>
+        <h3>Leiva Mauro</h3>
         <!-- aqui datos de contactos -->
     </footer>
+    <!-- aplicacion js -->
+    <script src="/js/app.js"></script>
 </body>
 </html>
