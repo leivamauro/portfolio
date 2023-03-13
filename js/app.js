@@ -6,7 +6,9 @@ darkModeBtn.addEventListener('click', () => {
   
   if (darkModeBtn.textContent === 'Dark') {
     darkModeBtn.textContent = 'Light';
+    darkModeBtn.className = 'light-mode-btn';
   } else {
     darkModeBtn.textContent = 'Dark';
+    darkModeBtn.className = '';
   }
 });

@@ -32,6 +32,9 @@ body {
 }
 
 /* INICIO - CONFIGURACION MODO OSCURO */
+.light-mode-btn {
+    background-color: red;
+}
 .dark-mode {
     background-color: #00BCD4;
     color: #333;
@@ -98,12 +101,6 @@ body {
     letter-spacing: 3px;
     font-weight: 600;
     text-align: center;
-}
-
-.personal .titulo {
-
-    
-
 }
 
 .personal img {
