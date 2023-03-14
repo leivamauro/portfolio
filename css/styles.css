@@ -16,22 +16,29 @@ body {
     position: fixed;
     top: 30px;
     right: 10px;
-    width: 60px;
-    height: 60px;
-    padding: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.9); /* el color de fondo debe cambiar segun el modo en el que se encuentre la pagin */
-    box-shadow: 0 0 80px .5px rgba(255, 255, 255, 0.6);
-    font-weight: 500;
-    text-align: center;
     cursor: pointer;
-    transition: transform .5s, background-color 1s, box-shadow 1s;
+    transition: transform .5s, box-shadow .5s;
 }
 
 /* INICIO - CONFIGURACION MODO OSCURO */
+.sun-mode-btn {
+    background: url("../images/sol.png");
+    background-size: 120% 120%;
+    background-repeat: no-repeat;
+    background-position: center; 
+    box-shadow: 0 0 80px 1px rgba(236, 255, 126, 0.9);
+}
+.moon-mode-btn {
+    background: url("../images/luna.png");
+    background-size: 120% 120%;
+    background-repeat: no-repeat;
+    background-position: center; 
+    box-shadow: 0 0 80px 1px rgba(181, 197, 154, 0.8);
+}
+
 .light-mode-btn {
     background-color: red;
 }
@@ -50,17 +57,18 @@ body {
     background-color: #008c9e;
     color: azure;
 }
-/* FIN - CONFIGURACION MODO OSCURO */
-
-
 #dark-mode-btn:hover {
-    transform: scaleX(115%) scaleY(89%);
-    box-shadow: 0 0 80px 1px rgba(205, 255, 126, 0.781);
+    transform: scaleX(115%) scaleY(115%);
+    box-shadow: 0 0 120px 1px rgba(205, 255, 126, 0.8);
 }
+
+/* FIN - CONFIGURACION MODO OSCURO */
 
 .main {
     display: flex;
 }
+
+/* Seccion configuracion de estilos de los articulos */
 
 .articles {
     width: 75%;
@@ -74,7 +82,7 @@ body {
 .articles article {
     width: 80%;
     min-width: 310px;
-    min-height: 50vh;
+    min-height: 500px;
     padding: 10px 10px 10px 5px;
     background-color: #008c9e;
     border-top-right-radius: 10px;
@@ -82,6 +90,31 @@ body {
     border-left: 10px solid rgb(3, 126, 197);
     color: #252525;
 }
+
+/* Seccion habilidades */
+
+#skills {
+    height: 100%;
+    display: grid;
+}
+.skills-container {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.skill {
+    width: 90px;
+    height: 90px;
+    display: flex;
+}
+.skills img {
+    height: auto;
+    border: 1px solid red;
+}
+
+/* Seccion apartado personal */
 
 .personal {
     position: -webkit-sticky;
