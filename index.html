@@ -6,65 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- estilos css -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- aplicacion js -->
+    <script src="/js/app.js" defer></script>
     <title>Leiva Mauro</title>
 </head>
 <body>
-    <header>
-        <div id="dark-mode-btn" class="moon-mode-btn"></div>
-    </header>
+
+    <aside class="personal">
+        <img src="/images/usuario.png" alt="Imagen de usuario aqui" srcset="">
+        <div class="titulo">
+            <h1>Apellido Nombre.</h1><!-- Hola!, Mi nombre es Mauro soy desarrollador de sofware -->
+        </div>
+        <ul>
+            <li><p><a href="#about_me">Sobre mi</a></p></li>
+            <li><p><a href="#portfolio">Proyectos Academicos</a></p></li>
+            <li><p><a href="#skills">Habilidades Tecnicas</a></p></li>
+            <li><p><a href="#studies">Mi estudios</a></p></li>
+            <li><p><a href="#contacts">Contactos</a></p></li>
+        </ul>
+    </aside>
+
     <main class="main">
-        <aside class="personal">
-            <img src="/images/usuario.png" alt="Imagen de usuario aqui" srcset="">
-            <div class="titulo">
-                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente impedit.<span>&#160;</span></h1><!-- Hola!, Mi nombre es Mauro soy desarrollador de sofware -->
-            </div>
-            <ul>
-                <li><p><a href="#about_me">About me</a></p></li>
-                <li><p><a href="#portfolio">Portfolio</a></p></li>
-                <li><p><a href="#skills">Technical Skills</a></p></li>
-                <li><p><a href="#studies">My Studies</a></p></li>
-                <li><p><a href="#contacts">Contacts</a></p></li>
-            </ul>
-        </aside>
-        <section class="articles">
+        <div id="dark-mode-btn" class="switch-btn"><div><!-- boton --></div></div>
+        <section class="articles-container">
             <article id="about_me">
-                <h1>About me</h1>
+                <h1>Sobre mi</h1>
                 <p>
                     Soy un programador autodidacta, apasionado por la tecnología y la programación, actualmente estoy cursando la tecnicatura en desarrollo de software. ¡Estoy en busca de mi primer trabajo formal o pasantía como programador para crecer profecionalmente y absorber la experiencia necesaria para contribur cada vez mas al grupo de trabajo!
                 </p>
             </article>
             <article id="portfolio">
-                <h1>Portfolio</h1>
+                <h1>Proyectos Academicos</h1>
                 <!-- portfolio -->
+                <!-- hacer unas cards para cada proyecto (javaScript)  -->
             </article>
             <article id="skills">
                 <!-- skills -->
-                <h1>Technical Skills</h1>
+                <h1>Habilidades Tecnicas</h1>
                 <div class="skills-container">
-                    <div class="skill"><img src="./icons/bootstrap.png" alt="BOOTSTRAP"></div>
-                    <div class="skill"><img src="./icons/css.png" alt="CSS"></div>
-                    <div class="skill"><img src="./icons/git.png" alt="GIT"></div>
-                    <div class="skill"><img src="./icons/html.png" alt="HTML"></div>
-                    <div class="skill"><img src="./icons/Java.png" alt="JAVA"></div>
-                    <div class="skill"><img src="./icons/js.png" alt="JAVASCRIPT"></div>
-                    <div class="skill"><img src="./icons/postgreSQL.png" alt="POSTGRESQL"></div>
-                    <div class="skill"><img src="./icons/sass.png" alt="SASS"></div>
+                    <img src="./icons/Java.png" alt="JAVA">
+                    <img src="./icons/html.png" alt="HTML">
+                    <img src="./icons/js.png" alt="JAVASCRIPT">
+                    <img src="./icons/css.png" alt="CSS">
+                    <img src="./icons/sass.png" alt="SASS">
+                    <img src="./icons/bootstrap.png" alt="BOOTSTRAP">
+                    <img src="./icons/git.png" alt="GIT">
+                    <img src="./icons/postgreSQL.png" alt="POSTGRESQL">
+                    <img src="./icons/SQLite.png" alt="SQLITE">
                 </div>
             </article>
             <article id="studies">
-                <h1>My studies</h1>
+                <h1>Mi estudios</h1>
                 <!-- estudios -->
+                <p>
+                    Actualmente me encuentro estudiando la carrera de <span>tecnico universitario en desarrollo de software</span> en la <span>universidad del chubut</span> a falta de 4 materias para recibirme.
+                </p>
             </article>
         </section>
     </main>
 
-    <footer id="contacts">
-        <h1>Contacts</h1>
-        <h4>Leiva Mauro</h4>
+    <footer id="contacts" class="footer">
+        <h1>Contactos</h1>
         <!-- aqui datos de contactos -->
-
+        <!-- <div><img src="./icons/linkedin.png" alt="LinkedIn"></div>
+        <div><img src="./icons/git.png" alt="Git"></div> -->
+        <div><a href="https://api.whatsapp.com/send?phone=%2B542804865675&text="><img src="./icons/whatsapp.png" alt="Whatsapp"></a> <a href="https://api.whatsapp.com/send?phone=%2B542804865675&text=">Mi Whatsapp</a> </div>
+        <div><a href="mailto:leivaexequiel02@gmail.com"><img src="./icons/gmail.png" alt="Gmail"></a> <a href="mailto:leivaexequiel02@gmail.com">leivaexequiel02@gmail.com</a></div> 
     </footer>
-    <!-- aplicacion js -->
-    <script src="/js/app.js"></script>
 </body>
 </html>

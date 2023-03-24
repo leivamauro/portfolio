@@ -1,18 +1,18 @@
 const darkModeBtn = document.getElementById('dark-mode-btn');
 const body = document.querySelector('body');
+const switchBtn = document.getElementById('dark-mode-btn');
 
-var darkMode = true;
+let darkMode = true;
 
 darkModeBtn.addEventListener('click', () => {
   body.classList.toggle('dark-mode');
-  
+
   if (darkMode) {
-    darkModeBtn.classList.remove('moon-mode-btn');
-    darkModeBtn.classList.toggle('sun-mode-btn');
+    switchBtn.style = 'display: flex; justify-content: end; background-color: #ffffffb3;';
     darkMode = false;
   } else {
-    darkModeBtn.classList.remove('sun-mode-btn');
-    darkModeBtn.classList.toggle('moon-mode-btn');
+    switchBtn.style = 'display: flex; justify-content: start; background-color: #132029b3;';
     darkMode = true;
   }
 });
+

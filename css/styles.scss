@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;1,300;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&family=Ubuntu:ital,wght@0,400;1,300;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    //font-family: 'Rubik Iso', cursive; // 400
+    font-family: 'Ubuntu', sans-serif; // 300, 400, 700
+    font-weight: 400;
+    text-align: center;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #00333a;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.switch-btn {
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    width: 60px;
+    height: 30px;
+    border: 2px solid rgb(3, 126, 197);
+    border-top-left-radius: 50% calc(65px/2);
+    border-bottom-left-radius: 50% calc(65px/2);
+    border-top-right-radius: 50% calc(65px/2);
+    border-bottom-right-radius: 50% calc(65px/2);
+    transition: .6s, display 1s;
+    cursor: pointer;
+}
+.switch-btn div {
+    width: 27px;
+    height: 27px;
+    background-color: #3ef6e6;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* INICIO - CONFIGURACION MODO OSCURO */
+
+.light-mode-btn {
+    background-color: red;
+}
+.dark-mode {
+    background-color: #00BCD4;
+    color: #333;
+}
+.dark-mode .personal {
+    background-color: #c7fffa;
+    color: #333;
+}
+
+.dark-mode .main .articles-container article {
+    background-color: white;
+    color: #252525;
+}
+
+.dark-mode .articles-container h1{
+    color: black;
+}
+/* FIN - CONFIGURACION MODO OSCURO */
+
+.personal {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    min-width: 300px;
+    max-height: 100vh;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    background-color: #252525;
+    color: white;
+
+    img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+.personal ul {
+    list-style: none;
+}
+
+.personal ul p {
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.personal ul p:hover {
+    transform: scale(130%);
+    color: #008c9e;
+}
+
+.main {
+    grid-column-start: 4;
+    grid-column-end: -1;
+}
+
+.articles-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    article {
+        width: 100%;
+        min-width: 300px;
+        min-height: 50vh;
+        padding: 10px;
+        background-color: #008c9e;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-left: 10px solid rgb(3, 126, 197);
+        color: #252525;
+        overflow: hidden;
+
+        h1 {
+            height: 55px;          
+            margin-bottom: 10px;
+            border-bottom: 2px solid black;
+            font-family: 'Rubik Iso', cursive;
+            font-weight: 700;
+            font-size: 2rem;
+            text-align: end;
+            color:#00333a;
+        }
+
+        p {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+/* SECCION DE HABILIDADES */
+.skills-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.skills-container img {
+    width: 70px;
+    height: 70px;
+}
+
+/* FOOTER */
+.footer {
+    grid-column-start: 4;
+    grid-column-end: -1; 
+    min-height: 400px;
+    margin-top: 20px;
+    padding: 15px 5px;
+    background-color: rgb(12, 17, 21);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer h1 {
+    margin-bottom: 30px;
+    margin-left: 10px;
+    font-family: 'Rubik Iso', cursive;
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: end;
+    text-transform: uppercase;
+    text-decoration-style: wavy;
+}
+
+.footer img {
+    width: 70px;
+    height: 70px;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+.footer div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* CONFIGUACION MEDIAS QUERIES (RESPONSIVE) */
+
+@media only screen and (max-width: 700px) {
+    body {
+      background-color: red;
+    }
+}
