@@ -14,7 +14,8 @@
 body {
     width: 100%;
     min-height: 100vh;
-    background-color: #00333a;
+    background-color: #00BCD4;
+    color: #333;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
 }
@@ -25,6 +26,9 @@ body {
     right: 10px;
     width: 60px;
     height: 30px;
+    display: flex; 
+    justify-content: start;
+    background-color: #ffffffb3;
     border: 2px solid rgb(3, 126, 197);
     border-top-left-radius: 50% calc(65px/2);
     border-bottom-left-radius: 50% calc(65px/2);
@@ -43,26 +47,26 @@ body {
 }
 
 /* INICIO - CONFIGURACION MODO OSCURO */
-
-.light-mode-btn {
-    background-color: red;
-}
 .dark-mode {
-    background-color: #00BCD4;
-    color: #333;
+    background-color: #00333a;
+}
+.dark-mode .switch-btn {
+    display: flex; 
+    justify-content: end; 
+    background-color: #132029b3;
 }
 .dark-mode .personal {
-    background-color: #c7fffa;
-    color: #333;
+    background-color: #252525;
+    color: white;
 }
 
 .dark-mode .main .articles-container article {
-    background-color: white;
+    background-color: #008c9e;
     color: #252525;
 }
 
 .dark-mode .articles-container h1{
-    color: black;
+    color:#00333a;
 }
 /* FIN - CONFIGURACION MODO OSCURO */
 
@@ -70,7 +74,7 @@ body {
     grid-column-start: 1;
     grid-column-end: 4;
     min-width: 300px;
-    max-height: 100vh;
+    height: 100vh;
     padding: 10px;
     position: sticky;
     top: 0;
@@ -79,8 +83,9 @@ body {
     justify-content: center;
     gap: 30px;
     align-items: center;
-    background-color: #252525;
-    color: white;
+    background-color: #c7fffa;
+    color: #333;
+    box-shadow: inset 0 0 10px black;
 
     img {
         width: 250px;
@@ -112,6 +117,7 @@ a:link, a:visited, a:hover, a:active {
 .main {
     grid-column-start: 4;
     grid-column-end: -1;
+    margin-top: 1px;
 }
 
 .articles-container {
@@ -125,22 +131,21 @@ a:link, a:visited, a:hover, a:active {
         min-width: 300px;
         min-height: 50vh;
         padding: 10px;
-        background-color: #008c9e;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
         border-left: 10px solid rgb(3, 126, 197);
-        color: #252525;
+        background-color: white;
+        color: #252525; 
         overflow: hidden;
 
         h1 {
-            height: 55px;          
             margin-bottom: 10px;
             border-bottom: 2px solid black;
             font-family: 'Rubik Iso', cursive;
             font-weight: 700;
             font-size: 2rem;
             text-align: end;
-            color:#00333a;
+            color: black;
         }
 
         p {
@@ -204,8 +209,58 @@ a:link, a:visited, a:hover, a:active {
 
 /* CONFIGUACION MEDIAS QUERIES (RESPONSIVE) */
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 950px) {
+    .personal {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        position: relative;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .main {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        width: 100%;
+
+        #dark-mode-btn {
+            position: absolute;
+            top: 30px;
+            right: 15px;
+        }
+    }
+    .articles-container {
+        width: 95%;
+        margin: 0 auto;
+    }
+    article {
+        border-radius: 10px;
+    }
+    .footer {
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+}
+
+@media only screen and (max-width: 300px) {
     body {
-      background-color: red;
+        grid-template-columns: 1fr;
+    }
+    .main #dark-mode-btn {
+        position: absolute;
+        top: 30px;
+        right: 0;
+    }
+    .articles-container {
+        width: 100%;
+    }
+    article {
+        min-width: 150px;
+        border-radius: 5px;
+    }
+    .personal {
+        img {
+            width: auto;
+            height: 100px;
+        }
     }
 }
