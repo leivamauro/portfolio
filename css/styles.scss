@@ -131,8 +131,8 @@ a:link, a:visited, a:hover, a:active {
         min-width: 300px;
         min-height: 50vh;
         padding: 10px;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
         border-left: 10px solid rgb(3, 126, 197);
         background-color: white;
         color: #252525; 
@@ -147,11 +147,53 @@ a:link, a:visited, a:hover, a:active {
             text-align: end;
             color: black;
         }
+        h1::after {
+            content: "";
+            height: 2rem;
+            border-right: 3px solid black;
+            animation-name: barra;
+            animation-duration: .9s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
 
         p {
             font-size: 1.3rem;
         }
     }
+}
+
+@keyframes barra {
+    0% {
+        border-right: hidden;
+    }
+    100% {
+        border-right-color: black;
+    }
+}
+
+/* SECCION DE PROYECTOS */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    
+    .card {
+        width: 15rem;
+        transition: transform .3s;
+        box-shadow: 0 0 2px #333;
+        z-index: 1;
+        transition: all .2s;
+    }
+
+    .card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 10px .1px #333;
+        cursor: pointer;
+        z-index: 10;
+    }
+
 }
 
 /* SECCION DE HABILIDADES */
